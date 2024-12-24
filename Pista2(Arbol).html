@@ -155,6 +155,12 @@
 
     <button onclick="verificar()">Siguiente Pista</button>
 
+    <div id="pista" style="display: none; margin-top: 20px;">
+    <p class="pista">Tu segunda pista: <b>Ve al comedor y busca el siguiente código QR.</b></p>
+    </div>
+
+    <div class="mensaje" id="mensaje"></div>
+
     <script>
         var nombre = new URLSearchParams(window.location.search).get('nombre');
         document.getElementById("nombreUsuario").textContent = nombre;
