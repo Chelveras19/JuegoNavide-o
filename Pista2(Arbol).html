@@ -162,7 +162,7 @@
         function verificar() {
             var password = document.getElementById("password").value;
             var respuesta = document.querySelector('input[name="respuesta"]:checked');
-            const contraseñaCorrecta = "navidad2024";
+            const contraseñaCorrecta = "rubicon";
 
             if (password !== contraseñaCorrecta) {
                 alert("¡Contraseña incorrecta!");
@@ -172,7 +172,9 @@
             if (!respuesta || respuesta.value === 'incorrecta') {
                 alert("¡Respuesta incorrecta! Has perdido $25.");
             } else {
-                window.location.href = "https://tu-usuario.github.io/juego-navideno/Pista3(Comedor).html";
+                document.getElementById("nombreUsuario").textContent = nombre;
+                document.getElementById("pista").style.display = "block";
+                document.getElementById("mensaje").textContent = "¡Bien hecho, " + nombre + "! la Contraseña del próximo código QR es: arbolnavidad.";
             }
         }
     </script>
