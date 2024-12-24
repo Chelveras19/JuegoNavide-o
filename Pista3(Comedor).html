@@ -172,7 +172,9 @@
             if (!respuesta || respuesta.value === 'incorrecta') {
                 alert("¡Respuesta incorrecta! Has perdido $25.");
             } else {
-                window.location.href = "https://tu-usuario.github.io/juego-navideno/Pista4(Refri).html";
+                document.getElementById("nombreUsuario").textContent = nombre;
+                document.getElementById("pista").style.display = "block";
+                document.getElementById("mensaje").textContent = "¡Bien hecho, " + nombre + "! la Contraseña del próximo código QR es: cuates.";
             }
         }
     </script>
