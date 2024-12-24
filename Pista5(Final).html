@@ -142,6 +142,12 @@
 </head>
 <body>
     <h1>¡Misión Cumplida!</h1>
+    <p>Por favor, escribe tu nombre para comenzar:</p>
+    <input type="text" id="nombre" placeholder="Tu nombre aquí">
+    
+    <p>Para continuar, ingresa la contraseña obtenida en la pista anterior:</p>
+    <input type="password" id="password" placeholder="Contraseña">
+    
     <p>Tu premio es una tarjeta de regalo de Amazon de <b>$500</b>.</p>
     <h2>Pregunta Final: ¿Qué frase dice el Grinch cuando descubre que su corazón está creciendo?</h2>
     <form id="quiz">
@@ -155,9 +161,17 @@
 
     <script>
         function finalizarJuego() {
+            var password = document.getElementById("password").value;
             var respuesta = document.querySelector('input[name="respuesta"]:checked');
             var nombre = new URLSearchParams(window.location.search).get('nombre');
+            const contraseñaCorrecta = "chavalitochocho";
 
+
+            if (password !== contraseñaCorrecta) {
+                alert("¡Contraseña incorrecta!");
+                return;
+            }
+            
             if (!respuesta || respuesta.value === 'incorrecta') {
                 alert("¡Respuesta incorrecta! Has perdido $25.");
             } else {
