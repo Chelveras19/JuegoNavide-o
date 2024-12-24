@@ -161,6 +161,7 @@
 
     <script>
         function finalizarJuego() {
+            const nombre = document.getElementById("nombre").value;
             var password = document.getElementById("password").value;
             var respuesta = document.querySelector('input[name="respuesta"]:checked');
             var nombre = new URLSearchParams(window.location.search).get('nombre');
